@@ -8,7 +8,7 @@
   <meta name="description" content="form">
   <meta name="keyword" content="form">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>HTML応用編 ~登録フォームを作ってみよう~</title>
+  <title>JHTML応用編 ~登録フォームを作ってみよう~</title>
   <link rel="stylesheet" href="./assets/css/reset.css">
   <link rel="stylesheet" href="./assets/css/base.css">
   <link rel="stylesheet" href="./assets/css/style.css">
@@ -31,16 +31,20 @@
       <!-- form -->
       <div class="infos">
         <div class="account font_grey t_center">アカウント情報</div>
-        <form class="info__contents" method="post" action="#">
+        <form class="info__contents" method="POST" action="#">
           <!-- name -->
           <div class="mt-30 just_flex">
             <div class="width_50">
               <p class="info__title">名字<span class="alert">※</span></p>
-              <label"><input type="text" name="name" class="box input_init" required></label">
+              <label">
+                <input type="text" name="first_name" class="box input_init" required>
+              </label">
             </div>
             <div class="width_50 ml-20">
               <p class="info__title">名前<span class="alert">※</span></p>
-              <label><input type="text" name="name" class="box input_init" required></label>
+              <label>
+                <input type="text" name="last_name" class="box input_init" required>
+              </label>
             </div>
           </div>
           <!-- name -->
@@ -48,12 +52,18 @@
           <div class="mt-30">
             <p class="info__title">性別</p>
             <div class="width_50">
-              <label><input type="radio" name="sex" value="男性" class="input_init radio_input"><span
-                  class="font-18 radio_parts">男性</span></label>
-              <label class="ml-20"><input type="radio" name="sex" value="女性" class="input_init radio_input"><span
-                  class="font-18 radio_parts">女性</span></label>
-              <label class="ml-20"><input type="radio" name="sex" value="その他" class="input_init radio_input"><span
-                  class="font-18 radio_parts">その他</span></label>
+              <label>
+                <input type="radio" name="sex" value="男性" class="input_init radio_input">
+                <span class="font-18 radio_parts">男性</span>
+              </label>
+              <label class="ml-20">
+                <input type="radio" name="sex" value="女性" class="input_init radio_input">
+                <span class="font-18 radio_parts">女性</span>
+              </label>
+              <label class="ml-20">
+                <input type="radio" name="sex" value="その他" class="input_init radio_input">
+                <span class="font-18 radio_parts">その他</span>
+              </label>
             </div>
           </div>
           <!-- sex -->
@@ -75,26 +85,34 @@
           <!-- email -->
           <div class="mt-30">
             <p class="info__title">Eメール<span class="alert">※</span></p>
-            <label><input type="text" name="last_name" required placeholder="ex) hoge@example.com"
-                class="box input_init" required></label>
+            <label>
+              <input type="email" name="email" placeholder="ex) hoge@example.com"
+                class="box input_init" required>
+            </label>
           </div>
           <!-- email -->
           <!-- tel -->
           <div class="mt-30">
             <p class="info__title">電話番号</p>
-            <label><input type="text" name="password" class="box input_init" placeholder="ex) 09012345678"></label>
+            <label>
+              <input type="tel" name="tel" class="box input_init" placeholder="ex) 09012345678">
+            </label>
           </div>
           <!-- password -->
           <!-- password -->
           <div class="mt-30">
             <p class="info__title">パスワード<span class="alert">※</span></p>
-            <label><input type="password" name="password" required class="box input_init"></label>
+            <label>
+              <input type="password" name="password" required class="box input_init">
+            </label>
           </div>
           <!-- password -->
           <!-- password_confirmation -->
           <div class="mt-30 required">
             <p class="info__title">パスワード(確認用)<span class="alert">※</span></p>
-            <label"><input type="password" name="password_cofirmation" required class="box input_init"></label">
+            <label">
+              <input type="password" name="password_cofirmation" required class="box input_init">
+            </label">
           </div>
           <!-- password_confirmation -->
           <!-- course -->
@@ -102,17 +120,24 @@
             <div class="width_50">
               <p class="info__title">希望コース</p>
               <div>
-                <label><input type="checkbox" name="course" value="フロントエンド" class="checkbox-input input_init"><span
-                    class="checkbox-parts">フロントエンド</span></label>
-              </div>
-              <br>
-              <div><label><input type="checkbox" name="course" value="バックエンド" class="checkbox-input input_init"><span
-                    class="checkbox-parts">バックエンド</span></label>
+                <label>
+                  <input type="checkbox" name="course" value="フロントエンド" class="checkbox-input input_init">
+                  <span class="checkbox-parts">フロントエンド</span>
+                </label>
               </div>
               <br>
               <div>
-                <label><input type="checkbox" name="course" value="アプリ" class="checkbox-input input_init"><span
-                    class="checkbox-parts">アプリ</span></label>
+                <label>
+                  <input type="checkbox" name="course" value="バックエンド" class="checkbox-input input_init">
+                  <span class="checkbox-parts">バックエンド</span>
+                </label>
+              </div>
+              <br>
+              <div>
+                <label>
+                  <input type="checkbox" name="course" value="アプリ" class="checkbox-input input_init">
+                  <span class="checkbox-parts">アプリ</span>
+                  </label>
               </div>
             </div>
             <!-- width50 -->
@@ -127,8 +152,11 @@
           <!-- submit -->
           <div class="mt-30">
             <input type="submit" value="アカウント作成" class="btn btn__green input_init">
-            <p class="privacy">アカウントを作成することにより、<a href="#" class="font_green term">利用規約</a>と<a href="#"
-                class="font_green policy">プライバシーポリシー</a>に同意するものとします。
+            <p class="privacy">アカウントを作成することにより、
+              <a href="#" class="font_green term">利用規約</a>
+              と
+              <a href="#" class="font_green policy">プライバシーポリシー</a>
+              に同意するものとします。
             </p>
           </div>
           <!-- submit -->
@@ -140,9 +168,13 @@
     <div class="footer t_center">
       <p class="footer__account">
         すでにアカウントをお持ちですか？
-        <a href="#" class="font_green footer__login">ログイン</a>
+        <a href="#" class="font_green footer__login">
+          ログイン
+        </a>
       </p>
-      <a href="#" class="font_green footer__mail">認証メールが届きませんか？</a>
+      <a href="#" class="font_green footer__mail">
+        認証メールが届きませんか？
+      </a>
     </div>
     <!-- footer -->
   </div>
