@@ -4,7 +4,6 @@ body {
   background-color: #f2f6f7;
   padding: 32px 0;
   width: 100%;
-
 }
 
 .inner {
@@ -28,11 +27,11 @@ a {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  padding: 0;
-  margin: 0;
-  outline: none;
   background: transparent;
+  outline: none;
   resize: none;
+  margin: 0;
+  padding: 0;
 }
 
 /* flex */
@@ -61,22 +60,27 @@ a {
 
 /* ボタン */
 .btn {
-  border:1px solid #d9d9d9;
+  border: 1px solid #d9d9d9;
   border-radius: 5px;
   cursor: pointer;
   font: 500px;
   font-size: 13px;
   font-weight: 500;
   transition: 0.3s;
-  padding: 13px ;
+  padding: 13px;
   width: 100%;
 }
 
 .btn__green {
-  background-color: #01a6a4;
-  border: 1px solid #01a6a4;
+  background-color: #01bfbd;
+  border: 1px solid #01bfbd;
   color: #fff;
   width: 100%;
+}
+
+.btn__green:hover {
+  background-color: #01a6a4;
+  color: #fff;
 }
 
 .btn__green:active {
@@ -94,6 +98,7 @@ a {
   color: #dd4b39;
   margin-left: 8px;
 }
+
 .google:hover {
   background-color: #f7f7f7;
 }
@@ -103,6 +108,7 @@ a {
   border: 1px solid #3b5999;
   color: #fff;
 }
+
 .facebook:hover {
   background-color: #344e87;
   border-color: transparent;
@@ -184,23 +190,23 @@ a {
   right: 10px;
   width: 10px;
   height: 10px;
-  transform:rotate(-46deg);
-  border-bottom:3px solid #d9d9d9;
+  transform: rotate(-46deg);
+  border-bottom: 3px solid #d9d9d9;
   border-left: 3px solid #d9d9d9;
-
 }
-
 
 /* checkbox カスタマイズ */
 
 .checkbox-input {
   display: none;
 }
+
 .checkbox-parts {
   padding-left: 20px;
   position: relative;
   color: #545658;
 }
+
 .checkbox-parts::before {
   content: "";
   display: block;
@@ -242,6 +248,7 @@ a {
 .width_50 {
   width: 50%;
 }
+
 .info__title {
   color: #545658;
   margin-bottom: 10px;
@@ -274,9 +281,6 @@ a {
 }
 
 /* アカウント作成 */
-
-
-
 .regist__sns {
   margin-top: 20px;
 }
@@ -322,7 +326,6 @@ a {
   left: 0;
 }
 
-
 /* アカウント作成ボタン以下 */
 .privacy {
   margin-top: 20px;
@@ -330,14 +333,14 @@ a {
   line-height: 1.4;
 }
 
-.term ,
+.term,
 .policy {
-  color:#01a6a4;
+  color: #01a6a4;
 }
 
-.term:hover ,
+.term:hover,
 .policy:hover {
-  color:#01bfbd;
+  color: #01bfbd;
 }
 
 .remarks {
@@ -351,18 +354,18 @@ a {
   border-radius: 3px;
 }
 
-
 .footer__account {
   margin-bottom: 8px;
 }
 
-.footer__login ,
+.footer__login,
 .footer__mail {
-  color:#01a6a4;
+  color: #01a6a4;
 }
-.footer__login:hover ,
+
+.footer__login:hover,
 .footer__mail:hover {
-  color:#01bfbd;
+  color: #01bfbd;
   border-bottom: 1px solid #01bfbd;
   /* border-bottom-color: #01bfbd; */
   /* text-decoration: underline; */
